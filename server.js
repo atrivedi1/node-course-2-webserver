@@ -6,6 +6,7 @@ const express = require('express');
 const hbs = require('hbs')
 
 //init express instance
+const port = process.env.PORT || 3000;
 const app = express();
 
 //app config + middleware
@@ -64,6 +65,6 @@ app.get('/bad', (req, res) => {
 
 
 
-app.listen(3000, () => {
-	console.log('Server is up and running on port 3000')
+app.listen(port, () => {
+	console.log(`Server is up and running on port ${port}`)
 });
